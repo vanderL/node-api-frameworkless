@@ -16,10 +16,10 @@ const server = http.createServer((request, response) => {
       email: "test"
     })
 
-    return response.end('Usuario estatico criado');
+    return response.writeHead(201).end();
   }
 
-  return response.end("404")
+  return response.writeHead(404).end()
 
 });
 
